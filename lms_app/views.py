@@ -18,9 +18,17 @@ def index(request):
     return render(request, 'pages/index.html', context)
 
 def books(request):
+    search = Book.objects.all()
+    title = None
+    if 'search_name' in request.GET:
+        title = request.GET['search_name']
+        if title:
+            search = search.filter(title__icontains=title)
+
+
     context = {
         'category': Category.objects.all(),
-        'books' : Book.objects.all()
+        'books' : search,
     }
     return render(request, 'pages/books.html', context)
 

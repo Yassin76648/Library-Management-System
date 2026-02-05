@@ -3,7 +3,7 @@
 <aside style="position: fixed;" class="main-sidebar sidebar-dark-primary elevation-4">
 <!-- Brand Logo -->
 <a href="{% url 'index' %}" class="brand-link">
-    <span class="brand-text font-weight-light">Liberary Management</span>
+    <span class="brand-text font-weight-light">نظام ادارة الكتب</span>
 </a>
 
 <!-- Sidebar -->
@@ -25,7 +25,7 @@
         <a href="{% url "books" %}" class="nav-link">
             <i class="nav-icon fas fa-th"></i>
             <p>
-            New Books
+            الكتب
             </p>
         </a>
         </li>
@@ -33,7 +33,7 @@
         <a href="#" class="nav-link">
             <i class="nav-icon fas fa-copy"></i>
             <p>
-            Category
+            الصنف
             <i class="fas fa-angle-left right"></i>
             
             </p>
@@ -43,15 +43,15 @@
                 <li class="nav-item">
                 <a id="addcat" href="#" class="nav-link">
                     <i class="fa fa-plus "></i>
-                    <p  class="text-light"> Add New </p>
+                    <p  class="text-light"> إنشاء كتاب جديد </p>
                 </a>
                 </li>
                 <div id="catinput">
                     <form id="cat" method="POST" action="{% url "add_category" %}">
                         {% csrf_token %}
                         {{category_form}}
-                        <button type="submit" class="btn btn-success">save</button>
-                        <button id="backcat" class="btn btn-primary ">back</button>
+                        <button type="submit" class="btn btn-success">حفظ</button>
+                        <button id="backcat" class="btn btn-primary ">تراجع</button>
                     </form>
                 </div>
 
@@ -68,7 +68,7 @@
         </ul>
         </li>
 
-        <li class="nav-header">الكتب المستعارة</li>
+        <li class="nav-header"> الحالة</li>
         
         <li style="cursor: pointer;" class="nav-item ststussold">
         <a id="statusSold" class="nav-link">

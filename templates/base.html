@@ -94,6 +94,26 @@
             $('#totalsalarys').text(total)
         });
     
+        var total2 = 0
+        $(".total_rental").each(function(){
+            $(this).hide()
+            var salary2 = $(this).text()
+            total2 += parseInt(salary2) 
+        });
+        $(".total_sold_book_rental").text(total2)
+        $(".total_sold_book_rental").hide()
+
+
+        var total1 = 0
+        $(".total_sold").each(function(){
+            $(this).hide()
+            var salary1 = $(this).text()
+            total1 += parseInt(salary1) 
+        });
+        $(".total_sold_book_price").text(total1)
+        $(".total_sold_book_price").hide()
+
+
         </script>
 
         <script>
@@ -127,14 +147,14 @@
                 backgroundColor: '#007bff',
                 borderColor    : '#007bff',
                 data           : [ 
-                    '50',
+                    $(".total_sold_book_price").text()
                 ]
                 },
                 {
                 backgroundColor: '#ced4da',
                 borderColor    : '#ced4da',
                 data           : [ 
-                        '30',
+                    $(".total_sold_book_rental").text()
                 ]
                 }
             ]

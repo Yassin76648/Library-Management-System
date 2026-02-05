@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
+<br> 
 <div style="direction: rtl;" class="wrapper">
 
     <!-- Content Wrapper. Contains page content -->
@@ -49,6 +50,25 @@
                     {% endif %}
                 {% endif %}
             {% endfor %}
+
+            <!-- sold books -->
+            {% for book in books %}
+                {% if book.price != None %}
+                    {% if book.status == "sold" %}
+                        <p class="total_sold">{{book.price}}</p> 
+                    {% endif %}
+                {% endif %} 
+            {% endfor %}
+            <p class="total_sold_book_price"></p>
+            <!-- rented books -->
+            {% for book in books %}
+                {% if book.total_price != None %}
+                    {% if book.status == "rental" %}
+                        <p class="total_rental">{{book.total_price}}</p>
+                    {% endif %}
+                {% endif %}
+            {% endfor %}
+            <p class="total_sold_book_rental"></p>
 
             <div class="col-lg-6">
                 <div class="card">
