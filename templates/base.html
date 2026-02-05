@@ -83,6 +83,16 @@
         $("#retaldays").keyup(function(){
             $("#totalretalprice").val($("#retalprice").val()*$("#retaldays").val())
         });
+
+        $(document).ready(function(){
+            var total= 0;
+            $('.total_salary').each(function(){
+                $(this).hide()
+                var salary = $(this).text()
+                total+= parseInt(salary)
+            });
+            $('#totalsalarys').text(total)
+        });
     
         </script>
 

@@ -36,6 +36,20 @@
             </div>
             <!-- /.col-md-6 -->
             
+            {% for book in books %}
+                {% if book.price != None %}
+                    {% if book.status == "sold" %}
+                        <p class="total_salary">{{book.price}}</p> 
+                    {% endif %}
+                {% endif %}
+
+                {% if book.total_price != None %}
+                    {% if book.status == "rental" %}
+                        <p class="total_salary">{{book.total_price}}</p>
+                    {% endif %}
+                {% endif %}
+            {% endfor %}
+
             <div class="col-lg-6">
                 <div class="card">
                 <div class="card-header border-0">
@@ -46,7 +60,7 @@
                 <div class="card-body">
                     <div class="d-flex">
                     <p class="d-flex flex-column">
-                        <span id="totalsalarys" class="text-bold text-lg">$250</span><br></p>
+                        <span id="totalsalarys" class="text-bold text-lg">$</span><br></p>
                     </div>
                     <!-- /.d-flex -->
 
