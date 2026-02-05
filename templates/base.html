@@ -80,6 +80,9 @@
             });
         {% endfor %}
 
+        $("#retaldays").keyup(function(){
+            $("#totalretalprice").val($("#retalprice").val()*$("#retaldays").val())
+        });
     
         </script>
 
