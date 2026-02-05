@@ -31,8 +31,6 @@ The system provides an admin-friendly interface with visual analytics (charts), 
 
 ## 🛠️ Tech Stack
 
-> *(Edit this section if needed)*
-
 * **Backend:** Django
 * **Frontend:** HTML, CSS, Bootstrap
 * **Charts:** Chart.js
@@ -80,44 +78,3 @@ python manage.py runserver
 http://127.0.0.1:8000/
 ```
 
----
-
-## 📂 Project Structure
-
-```text
-library-management-system/
-│
-├── lms_app/
-│   ├── models.py
-│   ├── views.py
-│ 
-├── static/
-│   ├── css/
-│   ├── js/
-│
-├── templates/
-│   └── dashboard.html
-│   ├── pages/
-│   ├── parts/
-│   └── base.html
-├── manage.py
-└── README.txt
-```
-
----
-
-## 🚀 Future Improvements
-
-* User roles (Admin / Librarian / Student)
-* Book reservation system
-* Export reports (PDF / Excel)
-* Notifications for overdue rentals
-* REST API integration
-
----
-
-## 📄 License
-
-This project is licensed under the **MIT License** – feel free to use and modify it.
-
----
